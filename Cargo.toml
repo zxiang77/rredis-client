@@ -4,7 +4,13 @@ version = "0.1.0"
 authors = ["Zili Xiang <zx77@cornell.edu>"]
 edition = "2018"
 
+[features]
+with-rustc-json = ["rustc-serialize"]
+with-unix-sockets = ["unix_socket", "tokio-uds"]
+with-system-unix-sockets = []
+
 [dependencies]
+url = "1.2"
 futures = "0.1"
 tokio-executor = "0.1"
 tokio-tcp = "0.1"
